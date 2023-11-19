@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  @apply p-5 cursor-pointer hover:brightness-150 md:h-max items-center md:items-start  h-16  min-w-fit rounded-lg bg-Darkblue text-white flex-1;
+}
+.img {
+  @apply w-16 absolute right-5;
+}
+.div-img {
+  @apply relative h-12 overflow-hidden;
+}
+.parent {
+  @apply flex flex-col rounded-lg;
+}
+.th-h2 {
+  @apply flex items-center justify-between;
+}
+.h2 {
+  @apply text-2xl md:text-6xl;
+}
+.h2h {
+  @apply text-sm;
+}
+.lastTime {
+  @apply text-Pale-Blue;
+}
+.time-par {
+  @apply flex md:flex-col justify-between md:items-start items-center gap-3;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(231, 13%, 90%);
+      }
+    </style>
+  </head>
+  <body class="font-Rubik bg-Very-darkblue flex flex-col h-screen md:justify-center">
+    <main
+      class="container grid md:grid-cols-2 lg:grid-cols-4 gap-5 w-11/12 md:w-full m-auto my-0 pt-10"
+    >
+      <div class="row-span-2 rounded-lg overflow-hidden bg-Darkblue h-max">
+        <div
+          class="bg-PrimaryBlue py-9 px-7 items-center gap-6 relative rounded-lg z-20 flex md:block"
+        >
+          <img
+            class="w-20 border rounded-full border-4 mb-8"
+            src="../images/image-jeremy.png"
+            alt=""
+          />
+          <p class="text-3xl text-white font-light pb-5">
+            <span class="block text-Pale-Blue font-light text-sm">Report for</span> Jeremy
+            <br class="hidden md:block" />
+            Robson
+          </p>
+        </div>
+        <div
+          class="rounded-xl flex md:flex-col font-light justify-around md:justify-start card text-Pale-Blue gap-3"
+        >
+          <p
+            class="hover:text-white hover:font-normal cursor-pointer pl-5 date text-white text-2xl font-medium"
+            id="Daily"
+          >
+            Daily
+          </p>
+          <p class="hover:text-white hover:font-normal cursor-pointer date" id="Weekly">Weekly</p>
+          <p class="hover:text-white hover:font-normal cursor-pointer date" id="Monthly">Monthly</p>
+        </div>
+      </div>
+      <div class="bg-work parent">
+        <div class="div-img">
+          <img class="img" src="../images/icon-work.svg" alt="" />
+        </div>
+        <div class="card">
+          <div class="th-h2">
+            <h2 class="h2h">Work</h2>
+            <svg
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hover:brightness-200 cursor-pointer"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+
+          <div class="time-par">
+            <p class="h2 time">5hrs</p>
+            <!-- daily -->
+            <p class="lastTime">Previous - 7hrs</p>
+            <!-- daily -->
+          </div>
+        </div>
+      </div>
+      <!--Play start -->
+      <div class="bg-play parent">
+        <div class="div-img">
+          <img class="img" src="../images/icon-play.svg" alt="" />
+        </div>
+        <div class="card">
+          <div class="th-h2">
+            <h2 class="h2h">Play</h2>
+            <svg
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hover:brightness-200 cursor-pointer"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="time-par">
+            <p class="h2 time">1hr</p>
+            <!-- daily -->
+            <p class="lastTime">Previous - 2hrs</p>
+            <!-- daily -->
+          </div>
+        </div>
+      </div>
+      <!--Play end -->
+
+      <div class="bg-study parent">
+        <div class="div-img">
+          <img class="img" src="../images/icon-study.svg" alt="" />
+        </div>
+        <div class="card">
+          <div class="th-h2">
+            <h2 class="h2h">Study</h2>
+            <svg
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hover:brightness-200 cursor-pointer"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="time-par">
+            <p class="h2 time">0hrs</p>
+            <!-- daily -->
+            <p class="lastTime">Previous - 1hr</p>
+            <!-- daily -->
+          </div>
+        </div>
+      </div>
+      <!-- Exercise start -->
+      <div class="bg-exercise parent">
+        <div class="div-img">
+          <img class="img" src="../images/icon-Exercise.svg" alt="" />
+        </div>
+        <div class="card">
+          <div class="th-h2">
+            <h2 class="h2h">Exercise</h2>
+            <svg
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hover:brightness-200 cursor-pointer"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="time-par">
+            <p class="h2 time">1hr</p>
+            <!-- daily -->
+            <p class="lastTime">Previous - 1hr</p>
+            <!-- daily -->
+          </div>
+        </div>
+      </div>
+      <!-- Exercise end -->
+      <!-- Social start -->
+      <div class="bg-social parent">
+        <div class="div-img">
+          <img class="img" src="../images/icon-social.svg" alt="" />
+        </div>
+        <div class="card">
+          <div class="th-h2">
+            <h2 class="h2h">Social</h2>
+            <svg
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hover:brightness-200 cursor-pointer"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+
+          <div class="time-par">
+            <p class="h2 time">1hr</p>
+            <!-- daily -->
+            <p class="lastTime">Previous - 3hrs</p>
+            <!-- daily -->
+          </div>
+        </div>
+      </div>
+      <!-- Social start -->
+      <div class="bg-selfCare parent">
+        <div class="div-img">
+          <img class="img" src="../images/icon-self-care.svg" alt="" />
+        </div>
+        <div class="card">
+          <div class="th-h2">
+            <h2 class="h2h">Self Care</h2>
+            <svg
+              width="21"
+              height="5"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hover:brightness-200 cursor-pointer"
+            >
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div class="time-par">
+            <p class="h2 time">0hrs</p>
+            <!-- daily -->
+            <p class="lastTime">Previous - 1hr</p>
+            <!-- daily -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution md:absolute bottom-4 left-4 text-white">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">ahmedsyed</a>.
+    </div>
+    <script src="./typescript.js"></script>
+  </body>
+</html>
