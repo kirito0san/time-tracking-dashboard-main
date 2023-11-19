@@ -27,12 +27,6 @@ let one = fetch(`../data.json`)
             }
         });
     });
-    // if (Daily.classList.contains(`pl-5`)) {
-    //     Daily.classList.remove(`pl-5`);
-    //     Daily.classList.remove(`text-white`);
-    //     Daily.classList.remove(`text-2xl`);
-    //     Daily.classList.remove(`font-medium`);
-    //   }
     Daily.addEventListener(`click`, () => {
         for (let i = 0; i < time.length; i++) {
             time[i].innerHTML = `${e[i].timeframes.daily.current == 1

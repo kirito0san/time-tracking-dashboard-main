@@ -4,7 +4,6 @@ let Monthly = document.querySelector(`#Monthly`) as HTMLElement;
 let time = document.querySelectorAll(`.time`) as NodeListOf<HTMLDivElement>;
 let lastTime = document.querySelectorAll(`.lastTime`) as NodeListOf<HTMLDivElement>;
 let date = document.querySelectorAll(`.date`) as NodeListOf<HTMLDivElement>;
-
 let one = fetch(`../data.json`)
   .then((data) => {
     return data.json();
@@ -27,13 +26,6 @@ let one = fetch(`../data.json`)
         }
       });
     });
-    // if (Daily.classList.contains(`pl-5`)) {
-    //     Daily.classList.remove(`pl-5`);
-    //     Daily.classList.remove(`text-white`);
-    //     Daily.classList.remove(`text-2xl`);
-    //     Daily.classList.remove(`font-medium`);
-    //   }
-
     Daily.addEventListener(`click`, () => {
       for (let i = 0; i < time.length; i++) {
         time[i].innerHTML = `${
